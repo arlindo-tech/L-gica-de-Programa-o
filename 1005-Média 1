@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main() {
+    double A,B,mp;
+    double PA=3.5,PB=7.5;
+    scanf("%lf %lf",&A,&B);
+    mp=((A*PA)+(B*PB))/(PA+PB);
+    printf("MEDIA = %.5lf\n",mp);
+    return 0;
+}
