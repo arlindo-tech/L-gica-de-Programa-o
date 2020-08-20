@@ -1,0 +1,24 @@
+#include <stdio.h>
+ 
+int main() {
+    
+    double media,soman = 0, n;
+    int i,soma=0;
+    
+    for(i=0;i<6;i++)
+    {
+        scanf("%lf",&n);
+        if(n>0)
+        {
+            soman= soman +n;
+            soma=soma+1;
+        }
+    
+        
+    }
+    media= soman/soma;
+    printf("%d valores positivos\n",soma);
+    printf("%.1lf\n",media);
+ 
+    return 0;
+}
