@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main() {
+ 
+   int N;
+   int X[10000];
+   int fora=0;
+   int dentro=0;
+   int i;
+   scanf("%d",&N);
+   
+  for(i=0;i<N;i++)
+  {
+    scanf("%d",&X[i]);
+    if(X[i]>=10 && X[i]<=20)
+    {
+      dentro=dentro +1;
+    }
+    else
+   {
+      fora=fora +1;
+    }
+  }
+  printf("%d in\n",dentro);
+  printf("%d out\n",fora);
+  return 0;
+}
