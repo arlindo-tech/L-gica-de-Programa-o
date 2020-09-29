@@ -1,0 +1,38 @@
+//numeros multiplos ou nao
+#include <stdio.h>
+ 
+int main() {
+ 
+    int A,B;
+    int divisao,resto;
+    
+    
+    scanf("%d %d",&A,&B);
+    if(A<B)
+    {
+        divisao=B/A;
+        resto=B%A;
+        if(resto==0)
+        {
+            printf("Sao Multiplos\n");
+        }
+        else
+        {
+            printf("Nao sao Multiplos\n");
+        }
+    }
+    else
+    {
+        divisao = A/B;
+        resto = A%B;
+        if(resto==0)
+        {
+            printf("Sao Multiplos\n");
+        }
+        else
+        {
+            printf("Nao sao Multiplos\n");
+        }
+    }
+    return 0;
+}
