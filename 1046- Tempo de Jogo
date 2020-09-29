@@ -1,0 +1,31 @@
+#include <stdio.h>
+ 
+int main(void) 
+{
+    
+    int horainicial;
+    int horafinal;
+    int totalhoras;
+    scanf(" %d %d",&horainicial,&horafinal);
+    if(horainicial==horafinal)
+    {
+        totalhoras = 24;
+        printf("O JOGO DUROU %d HORA(S)\n",totalhoras);
+    }
+    
+    else if(horafinal<horainicial)
+    {
+        totalhoras = (24 -horainicial) + horafinal;
+        printf("O JOGO DUROU %d HORA(S)\n",totalhoras);
+    }
+    
+    else 
+    {
+        totalhoras = horafinal-horainicial;
+        printf("O JOGO DUROU %d HORA(S)\n",totalhoras);
+    }
+    
+    
+    
+    return 0;
+}
