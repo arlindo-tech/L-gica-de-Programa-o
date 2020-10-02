@@ -1,0 +1,16 @@
+//seis numeros impares consecutivos
+#include <stdio.h>
+int main(void)
+{
+    int X;//valor inicial
+    int i;//6 numeros impares consecutivos de X
+    scanf("%d",&X);
+    for(i=X;i<X+12;i++)
+    {
+        if((i%2)!=0)
+        {
+            printf("%d\n",i);
+        }
+    }
+    return 0;
+}
