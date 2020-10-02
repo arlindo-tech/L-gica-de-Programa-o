@@ -1,0 +1,22 @@
+//quadrado dos pares
+#include <stdio.h>
+int main(void)
+{
+    int N,quadrado;
+    int i;
+    scanf("%d",&N);
+    if(5<N && N<2000)
+    {
+        for(i=2;i<=N;i++)
+        {
+            if(i%2==0)
+            {
+              quadrado=i*i;
+              printf("%d^%d = %d\n",i,2,quadrado);   
+            }
+            
+        }
+    }
+    
+    return 0;
+}
