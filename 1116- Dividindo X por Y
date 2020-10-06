@@ -1,0 +1,27 @@
+//dividindo x por y
+#include <stdio.h>
+int main() 
+{
+    int x,y;//valores
+    int n,i;//n quantas vezes vai repetir
+    double resultado;//resultado da divisao
+    scanf("%d",&n);
+    for(i=1;i<n+1;i++)
+    {
+        scanf("%d %d",&x,&y);
+        
+        if(y==0)
+        {
+            printf("divisao impossivel\n");
+        }
+       else
+       {
+           resultado = (double)x/(double)y;
+           printf("%.1lf\n",resultado);
+       }
+    }
+    return 0;
+}
+
+
+
