@@ -1,0 +1,50 @@
+//experiencias
+#include <stdio.h>
+ 
+int main() 
+{
+    int i, n;//n=quantidade de testes
+    int quantia;//quantidade de cada cobaia
+    int total=0;//total de cobaias
+    int totalc=0;//total de coelhos 
+    int totalr=0;//total de ratos
+    int totals=0;//total de sapos
+    double pc;//porcentagem de coelhos
+    double pr;//porcentagens de ratos
+    double ps;//porcentagens de sapos
+    char tipo;//se e coelho,sapo ou rato
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d %c",&quantia,&tipo);
+        if(1<=quantia && quantia<=15)
+        {
+            total= total+quantia;
+            if(tipo=='C')
+            {
+                totalc=totalc + quantia;
+            }
+            if(tipo=='R')
+            {
+                totalr=totalr + quantia;
+            }
+            if(tipo=='S')
+            {
+                totals=totals + quantia;
+            }
+        }
+    }
+    pc= (totalc*100.00)/total;
+    ps= (totals*100.00)/total;
+    pr= (totalr*100.00)/total;
+    printf("Total: %d cobaias\n",total);
+    printf("Total de coelhos: %d\n",totalc);
+    printf("Total de ratos: %d\n",totalr);
+    printf("Total de sapos: %d\n",totals);
+    printf("Percentual de coelhos: %.2lf %%\n",pc);
+    printf("Percentual de ratos: %.2lf %%\n",pr);
+    printf("Percentual de sapos: %.2lf %%\n",ps);
+    
+ 
+    return 0;
+}
