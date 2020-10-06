@@ -1,0 +1,16 @@
+//media ponderada
+#include <stdio.h>
+int main() {
+ 
+    int i,N;//n= numero de casos de testes
+    double nota1,nota2,nota3,media;
+    double p1=2,p2=3,p3=5;//peso de cada nota
+    scanf("%d",&N);
+    for(i=0;i<N;i++)
+    {
+        scanf("%lf %lf %lf",&nota1,&nota2,&nota3);
+        media=((nota1*p1)+(nota2*p2)+(nota3*p3))/(p1+p2+p3);
+        printf("%.1lf\n",media);
+    }
+    return 0;
+}
