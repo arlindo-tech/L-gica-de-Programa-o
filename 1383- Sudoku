@@ -1,0 +1,224 @@
+#include <stdio.h>
+
+
+void limpaVetor(int vet[]) {
+  int i;
+  for (i = 1; i <= 9; i++) {
+    vet[i] = 0;
+  }
+}
+
+int analisaVetor(int vet[]) {
+  int i;
+  for (i = 1; i <= 9; i++) {
+    if (vet[i] != 1)
+      return 0; 
+  }
+  return 1;
+}
+
+int main(void) {
+  int matriz[9][9];
+  int i,j,m;//linhas,colunas e blocos
+  int aux;//auxiliar
+  int vet[10], x;
+  int n;
+  scanf("%d",&n);
+  for(m=0;m<n;m++)//blocos
+  {
+    aux = 1;
+    for(i=0;i<9;i++)//linhas
+    {
+      for(j=0;j<9;j++)//colunas
+      {
+        scanf("%d",&matriz[i][j]);
+      }
+    }
+    for(i=0;i<9;i++)//linhas
+    {
+      limpaVetor(vet);
+      for(j=0;j<9;j++)// verificacao das colunas
+      {
+        x = matriz[i][j];
+        vet[x]++;
+      }
+      if(analisaVetor(vet) == 0)
+      {
+        aux=0;
+        break;
+      }
+    }
+    if(aux!=0)
+    {
+      for(j=0;j<9;j++)// colunas
+      {
+        limpaVetor(vet);
+        for(i=0;i<9;i++)// verificacao das linhas
+        {
+          x = matriz[i][j];
+          vet[x]++;
+        }
+        if(analisaVetor(vet) == 0)
+        {
+          aux=0;
+          break;
+        }
+      }
+    }
+    if(aux!=0)//analisando 1 matriz 3x3
+    {
+      limpaVetor(vet);
+      for(i=0;i<3;i++)
+      {
+        for(j=0;j<3;j++)
+        {
+          x = matriz[i][j];
+          vet[x]++;
+        }
+      }
+      if(analisaVetor(vet) == 0)
+      {
+        aux=0;
+      }
+    }
+    if(aux!=0)//analisando 2 matriz 3x3
+    {
+      limpaVetor(vet);
+      for(i=0;i<3;i++)
+      {
+        for(j=3;j<6;j++)
+        {
+          x = matriz[i][j];
+          vet[x]++;
+        }
+      }
+      if(analisaVetor(vet) == 0)
+      {
+        aux=0;
+      }
+    }
+    if(aux!=0)//analisando 3 matriz 3x3
+    {
+      limpaVetor(vet);
+      for(i=0;i<3;i++)
+      {
+        for(j=6;j<9;j++)
+        {
+          x = matriz[i][j];
+          vet[x]++;
+        }
+      }
+      if(analisaVetor(vet) == 0)
+      {
+        aux=0;
+      }
+    }
+    if(aux!=0)//analisando 4 matriz 3x3
+    {
+      limpaVetor(vet);
+      for(i=3;i<6;i++)
+      {
+        for(j=0;j<3;j++)
+        {
+          x = matriz[i][j];
+          vet[x]++;
+        }
+      }
+      if(analisaVetor(vet) == 0)
+      {
+        aux=0;
+      }
+    }
+    if(aux!=0)//analisando 5 matriz 3x3
+    {
+      limpaVetor(vet);
+      for(i=3;i<6;i++)
+      {
+        for(j=3;j<6;j++)
+        {
+          x = matriz[i][j];
+          vet[x]++;
+        }
+      }
+      if(analisaVetor(vet) == 0)
+      {
+        aux=0;
+      }
+    }
+    if(aux!=0)//analisando 6 matriz 3x3
+    {
+      limpaVetor(vet);
+      for(i=3;i<6;i++)
+      {
+        for(j=6;j<9;j++)
+        {
+          x = matriz[i][j];
+          vet[x]++;
+        }
+      }
+      if(analisaVetor(vet) == 0)
+      {
+        aux=0;
+      }
+    }
+    if(aux!=0)//analisando 7 matriz 3x3
+    {
+      limpaVetor(vet);
+      for(i=6;i<9;i++)
+      {
+        for(j=0;j<3;j++)
+        {
+          x = matriz[i][j];
+          vet[x]++;
+        }
+      }
+      if(analisaVetor(vet) == 0)
+      {
+        aux=0;
+      }
+    }
+    if(aux!=0)//analisando 8 matriz 3x3
+    {
+      limpaVetor(vet);
+      for(i=6;i<9;i++)
+      {
+        for(j=3;j<6;j++)
+        {
+          x = matriz[i][j];
+          vet[x]++;
+        }
+      }
+      if(analisaVetor(vet) == 0)
+      {
+        aux=0;
+      }
+    }
+    if(aux!=0)//analisando 9 matriz 3x3
+    {
+      limpaVetor(vet);
+      for(i=6;i<9;i++)
+      {
+        for(j=6;j<9;j++)
+        {
+          x = matriz[i][j];
+          vet[x]++;
+        }
+      }
+      if(analisaVetor(vet) == 0)
+      {
+        aux=0;
+      }
+    } 
+    printf("Instancia %d\n",m+1);
+    if(aux==1)
+    {
+      printf("SIM\n");
+    }  
+    else
+    {
+      printf("NAO\n");
+    }
+    printf("\n");
+  }
+  return 0;
+}
